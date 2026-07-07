@@ -4,15 +4,16 @@
   LA VUELTA — Página "Nosotros"
   ============================================================
   CÓMO USAR EN TIENDA NUBE:
-  1) Subí las 7 imágenes de /assets a Diseño > Archivos (o Productos > Archivos)
-     y copiá la URL pública que te da Tienda Nube para cada una.
-     IMPORTANTE: 01-hero.jpg y 07-cierre.jpg deben subirse SIN texto incrustado
-     (solo la foto), porque el texto de esas dos secciones ya está armado
-     como HTML real encima de la imagen.
-  2) Reemplazá cada "assets/0X-....jpg" de abajo por esa URL (buscá "src=").
-  3) Reemplazá el href="#productos" del botón "EXPLORAR PRODUCTOS" por el
+  1) Las imágenes se sirven directo desde GitHub vía jsDelivr
+     (https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/...), así
+     que NO hace falta subirlas al Archivo de Tienda Nube. Si actualizás
+     alguna imagen en el repo, jsDelivr puede tardar hasta ~7 días en
+     reflejar el cambio por caché de la rama "@main"; para forzarlo, purgá
+     la URL en https://www.jsdelivr.com/tools/purge o referenciá el commit
+     puntual (@<hash>) en vez de @main.
+  2) Reemplazá el href="#productos" del botón "EXPLORAR PRODUCTOS" por el
      link real a tu categoría/catálogo de productos.
-  4) Copiá TODO este archivo (desde el <div class="lv-nosotros"> hasta el
+  3) Copiá TODO este archivo (desde el <div class="lv-nosotros"> hasta el
      cierre) y pegalo en el editor HTML de tu Página "Nosotros"
      (Mi Tienda > Diseño Online > Páginas > Editar > modo HTML).
   ============================================================
@@ -130,7 +131,7 @@
 
 <!-- 1. HERO -->
 <section class="lv-section lv-hero">
-  <img src="assets/01-hero.jpg" alt="Camino de montaña con el auto y la caja La Vuelta en el baúl">
+  <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/01-hero.jpg" alt="Camino de montaña con el auto y la caja La Vuelta en el baúl">
   <div class="lv-hero-overlay"></div>
   <div class="lv-hero-content">
     <h1>Nosotros viajamos<br>para que vos vuelvas.</h1>
@@ -156,7 +157,7 @@
       <p>Para que no haga falta viajar miles de kilómetros para volver a probar esos sabores.</p>
     </div>
     <div class="lv-col-img">
-      <img src="assets/02-familia.jpg" alt="Familia abriendo una caja La Vuelta en su cocina">
+      <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/02-familia.jpg" alt="Familia abriendo una caja La Vuelta en su cocina">
     </div>
   </div>
 </section>
@@ -187,7 +188,7 @@
       </ul>
     </div>
     <div class="lv-col-img">
-      <img src="assets/03-productores.jpg" alt="Productores regionales: quesero, alfajores, apicultor, olivos">
+      <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/03-productores.jpg" alt="Productores regionales: quesero, alfajores, apicultor, olivos">
     </div>
   </div>
 </section>
@@ -206,7 +207,7 @@
       Y volver una y otra vez.</p>
     </div>
     <div class="lv-col-img">
-      <img src="assets/04-mapa.jpg" alt="Mapa de Argentina con el recorrido de La Vuelta por Mendoza, San Luis, Córdoba, Patagonia, Misiones y Buenos Aires">
+      <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/04-mapa.jpg" alt="Mapa de Argentina con el recorrido de La Vuelta por Mendoza, San Luis, Córdoba, Patagonia, Misiones y Buenos Aires">
     </div>
   </div>
 </section>
@@ -215,7 +216,7 @@
 <section class="lv-section">
   <div class="lv-row">
     <div class="lv-col-img">
-      <img src="assets/05-miel.jpg" alt="Frasco de miel de montaña de San Luis en manos de un productor">
+      <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/05-miel.jpg" alt="Frasco de miel de montaña de San Luis en manos de un productor">
     </div>
     <div class="lv-col lv-col-text">
       <h2>Creemos en<br>hacer las cosas despacio.</h2>
@@ -257,14 +258,14 @@
       Y quienes todavía creen que un regalo puede tener historia.</p>
     </div>
     <div class="lv-col-img">
-      <img src="assets/06-entrega.jpg" alt="Entrega de una caja La Vuelta de mano en mano">
+      <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/06-entrega.jpg" alt="Entrega de una caja La Vuelta de mano en mano">
     </div>
   </div>
 </section>
 
 <!-- 7. CIERRE / FOOTER -->
 <section class="lv-section lv-footer">
-  <img src="assets/07-cierre.jpg" alt="Paisaje de montañas al atardecer">
+  <img src="https://cdn.jsdelivr.net/gh/holden-ar/la-vuelta@main/assets/07-cierre.jpg" alt="Paisaje de montañas al atardecer">
   <div class="lv-footer-overlay"></div>
   <div class="lv-footer-content">
     <div class="lv-footer-text">
