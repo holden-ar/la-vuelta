@@ -1,0 +1,279 @@
+<meta charset="utf-8">
+<!--
+  ============================================================
+  LA VUELTA — Página "Nosotros"
+  ============================================================
+  CÓMO USAR EN TIENDA NUBE:
+  1) Subí las 7 imágenes de /assets a Diseño > Archivos (o Productos > Archivos)
+     y copiá la URL pública que te da Tienda Nube para cada una.
+     IMPORTANTE: 01-hero.jpg y 07-cierre.jpg deben subirse SIN texto incrustado
+     (solo la foto), porque el texto de esas dos secciones ya está armado
+     como HTML real encima de la imagen.
+  2) Reemplazá cada "assets/0X-....jpg" de abajo por esa URL (buscá "src=").
+  3) Reemplazá el href="#productos" del botón "EXPLORAR PRODUCTOS" por el
+     link real a tu categoría/catálogo de productos.
+  4) Copiá TODO este archivo (desde el <div class="lv-nosotros"> hasta el
+     cierre) y pegalo en el editor HTML de tu Página "Nosotros"
+     (Mi Tienda > Diseño Online > Páginas > Editar > modo HTML).
+  ============================================================
+-->
+<div class="lv-nosotros">
+<style>
+.lv-nosotros{
+  --lv-cream:#f3ede0;
+  --lv-cream-alt:#ece3d1;
+  --lv-dark:#2c2620;
+  --lv-text:#4a4238;
+  --lv-accent:#c1893c;
+  --lv-accent-dark:#a06f2d;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  color:var(--lv-text);
+  background:var(--lv-cream);
+  line-height:1.6;
+}
+.lv-nosotros *{box-sizing:border-box;}
+.lv-nosotros img{max-width:100%;display:block;}
+.lv-nosotros h2{
+  font-family:Georgia,'Times New Roman',serif;
+  color:var(--lv-dark);
+  font-weight:400;
+  margin:0 0 14px;
+  line-height:1.25;
+  font-size:28px;
+}
+.lv-nosotros p{margin:0 0 14px;font-size:15px;}
+.lv-nosotros .lv-highlight{color:var(--lv-accent-dark);}
+.lv-nosotros .lv-divider{display:flex;align-items:center;gap:8px;margin:0 0 20px;}
+.lv-nosotros .lv-divider span{width:26px;height:1px;background:var(--lv-accent);display:inline-block;}
+.lv-nosotros .lv-divider i{width:6px;height:6px;border-radius:50%;background:var(--lv-accent);display:inline-block;}
+
+.lv-nosotros .lv-section{width:100%;overflow:hidden;}
+.lv-nosotros .lv-row{display:flex;flex-wrap:wrap;align-items:stretch;}
+.lv-nosotros .lv-col{padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}
+.lv-nosotros .lv-col-img{padding:0;flex:1 1 0;min-width:280px;}
+.lv-nosotros .lv-col-img img{width:100%;height:100%;object-fit:cover;}
+.lv-nosotros .lv-col-text{flex:1 1 0;min-width:280px;}
+
+/* Hero */
+.lv-nosotros .lv-hero{position:relative;color:#fff;}
+.lv-nosotros .lv-hero img{width:100%;height:auto;}
+.lv-nosotros .lv-hero .lv-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(20,16,10,.55) 0%,rgba(20,16,10,.15) 45%,rgba(20,16,10,0) 65%);
+}
+.lv-nosotros .lv-hero .lv-hero-content{
+  position:absolute;top:0;left:0;height:100%;width:56%;
+  padding:6% 5%;display:flex;flex-direction:column;justify-content:center;
+}
+.lv-nosotros .lv-hero h1{
+  font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.25;
+  margin:0 0 14px;font-size:34px;color:#fff;
+}
+.lv-nosotros .lv-hero p{color:#f1ece2;font-size:14px;}
+.lv-nosotros .lv-hero .lv-divider span{background:var(--lv-accent);}
+
+/* Alternating backgrounds */
+.lv-nosotros .lv-bg-alt{background:var(--lv-cream-alt);}
+
+/* Icon list */
+.lv-nosotros .lv-icon-list{list-style:none;margin:0;padding:0;}
+.lv-nosotros .lv-icon-list li{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;}
+.lv-nosotros .lv-icon-list li:last-child{margin-bottom:0;}
+.lv-nosotros .lv-icon-list svg{
+  flex:0 0 auto;width:20px;height:20px;margin-top:2px;
+  fill:none;stroke:var(--lv-accent);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;
+}
+.lv-nosotros .lv-icon-list p{margin:0;font-size:14.5px;}
+
+/* Cada caja es un viaje (3 columnas: texto / mapa) */
+.lv-nosotros .lv-viaje .lv-col-text{flex:0 0 34%;min-width:260px;}
+.lv-nosotros .lv-viaje .lv-col-img{flex:0 0 66%;align-self:center;position:relative;overflow:hidden;background:#eee3d7;}
+.lv-nosotros .lv-viaje .lv-col-img::before{content:"";display:block;padding-top:28.5%;}
+.lv-nosotros .lv-viaje .lv-col-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:bottom;}
+
+/* Footer / cierre */
+.lv-nosotros .lv-footer{position:relative;color:#fff;}
+.lv-nosotros .lv-footer img{width:100%;height:auto;}
+.lv-nosotros .lv-footer .lv-footer-overlay{
+  position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,12,8,.6) 0%,rgba(15,12,8,.25) 60%,rgba(15,12,8,.05) 100%);
+}
+.lv-nosotros .lv-footer .lv-footer-content{
+  position:absolute;top:0;left:0;height:100%;width:100%;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;
+  padding:5% 6%;
+}
+.lv-nosotros .lv-footer h2{color:#fff;font-size:26px;margin-bottom:8px;}
+.lv-nosotros .lv-footer p{color:#eee7da;font-size:14px;margin-bottom:0;max-width:420px;}
+.lv-nosotros .lv-footer-text{flex:1 1 320px;}
+.lv-nosotros .lv-btn{
+  display:inline-block;flex:0 0 auto;background:var(--lv-accent);color:#241d15;
+  font-size:13px;letter-spacing:.06em;font-weight:700;text-decoration:none;
+  padding:16px 30px;border-radius:2px;white-space:nowrap;
+}
+.lv-nosotros .lv-btn:hover{background:var(--lv-accent-dark);color:#fff;}
+
+/* Responsive */
+@media (max-width:860px){
+  .lv-nosotros h2{font-size:22px;}
+  .lv-nosotros .lv-col{padding:36px 24px;}
+  .lv-nosotros .lv-row{flex-direction:column;}
+  .lv-nosotros .lv-col-img{min-height:220px;}
+  .lv-nosotros .lv-viaje .lv-col-text,
+  .lv-nosotros .lv-viaje .lv-col-img{flex:1 1 100%;}
+  .lv-nosotros .lv-hero h1{font-size:26px;}
+  .lv-nosotros .lv-hero .lv-hero-content{width:100%;background:rgba(15,12,8,.35);}
+  .lv-nosotros .lv-hero .lv-hero-overlay{background:rgba(15,12,8,.45);}
+  .lv-nosotros .lv-footer .lv-footer-content{background:rgba(15,12,8,.4);}
+  .lv-nosotros .lv-footer-text{flex:1 1 100%;}
+}
+</style>
+
+<!-- 1. HERO -->
+<section class="lv-section lv-hero">
+  <img src="assets/01-hero.jpg" alt="Camino de montaña con el auto y la caja La Vuelta en el baúl">
+  <div class="lv-hero-overlay"></div>
+  <div class="lv-hero-content">
+    <h1>Nosotros viajamos<br>para que vos vuelvas.</h1>
+    <div class="lv-divider"><span></span><i></i><span></span></div>
+    <p>Cada provincia tiene un paisaje.<br>
+    Cada pueblo tiene una historia.<br>
+    Cada productor guarda una receta que pasó de generación en generación.</p>
+    <p class="lv-highlight">En La Vuelta recorremos Argentina para acercarte esos sabores auténticos, respetando su origen y a quienes los hacen posibles.</p>
+  </div>
+</section>
+
+<!-- 2. TODO EMPEZÓ CON UNA SENSACIÓN -->
+<section class="lv-section">
+  <div class="lv-row">
+    <div class="lv-col lv-col-text">
+      <h2>Todo empezó<br>con una sensación.</h2>
+      <div class="lv-divider"><span></span><i></i><span></span></div>
+      <p>No hay nada más lindo que volver de un viaje.<br>
+      Abrir el baúl. Repartir los regalos. Compartir un alfajor.<br>
+      Un dulce. Un salame. Una yerba.</p>
+      <p>Porque los mejores recuerdos siempre terminan alrededor de una mesa.</p>
+      <p class="lv-highlight">La Vuelta nació para recuperar esa sensación.</p>
+      <p>Para que no haga falta viajar miles de kilómetros para volver a probar esos sabores.</p>
+    </div>
+    <div class="lv-col-img">
+      <img src="assets/02-familia.jpg" alt="Familia abriendo una caja La Vuelta en su cocina">
+    </div>
+  </div>
+</section>
+
+<!-- 3. RECORREMOS ARGENTINA BUSCANDO HISTORIAS -->
+<section class="lv-section lv-bg-alt">
+  <div class="lv-row">
+    <div class="lv-col lv-col-text">
+      <h2>Recorremos Argentina<br>buscando historias.</h2>
+      <div class="lv-divider"><span></span><i></i><span></span></div>
+      <ul class="lv-icon-list">
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+          <p>No elegimos productos por una marca.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <p>Elegimos personas.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <p>Conocemos productores.<br>Visitamos fincas.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <p>Entramos a fábricas familiares.<br>Probamos recetas.<br>Escuchamos historias.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="lv-col-img">
+      <img src="assets/03-productores.jpg" alt="Productores regionales: quesero, alfajores, apicultor, olivos">
+    </div>
+  </div>
+</section>
+
+<!-- 4. CADA CAJA ES UN VIAJE -->
+<section class="lv-section lv-viaje">
+  <div class="lv-row">
+    <div class="lv-col lv-col-text">
+      <h2>Cada caja es<br>un viaje.</h2>
+      <div class="lv-divider"><span></span><i></i><span></span></div>
+      <p>No armamos productos.<br>Armamos recorridos.</p>
+      <p>Podés descubrir Mendoza.<br>
+      Después viajar a Patagonia.<br>
+      Seguir por el Norte.<br>
+      Llegar a Misiones.<br>
+      Y volver una y otra vez.</p>
+    </div>
+    <div class="lv-col-img">
+      <img src="assets/04-mapa.jpg" alt="Mapa de Argentina con el recorrido de La Vuelta por Mendoza, San Luis, Córdoba, Patagonia, Misiones y Buenos Aires">
+    </div>
+  </div>
+</section>
+
+<!-- 5. CREEMOS EN HACER LAS COSAS DESPACIO -->
+<section class="lv-section">
+  <div class="lv-row">
+    <div class="lv-col-img">
+      <img src="assets/05-miel.jpg" alt="Frasco de miel de montaña de San Luis en manos de un productor">
+    </div>
+    <div class="lv-col lv-col-text">
+      <h2>Creemos en<br>hacer las cosas despacio.</h2>
+      <div class="lv-divider"><span></span><i></i><span></span></div>
+      <ul class="lv-icon-list">
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <p>No buscamos vender miles de productos.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+          <p>Buscamos elegir los mejores.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <p>Trabajamos con pequeños productores.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <p>Valoramos la calidad antes que el volumen.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+          <p>Y creemos que conocer el origen de un alimento hace que también cambie su sabor.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MÁS QUE UNA TIENDA -->
+<section class="lv-section lv-bg-alt">
+  <div class="lv-row">
+    <div class="lv-col lv-col-text">
+      <h2>Más que<br>una tienda.</h2>
+      <div class="lv-divider"><span></span><i></i><span></span></div>
+      <p>Queremos construir un puente.<br>
+      Entre quienes producen con pasión.<br>
+      Y quienes todavía creen que un regalo puede tener historia.</p>
+    </div>
+    <div class="lv-col-img">
+      <img src="assets/06-entrega.jpg" alt="Entrega de una caja La Vuelta de mano en mano">
+    </div>
+  </div>
+</section>
+
+<!-- 7. CIERRE / FOOTER -->
+<section class="lv-section lv-footer">
+  <img src="assets/07-cierre.jpg" alt="Paisaje de montañas al atardecer">
+  <div class="lv-footer-overlay"></div>
+  <div class="lv-footer-content">
+    <div class="lv-footer-text">
+      <h2>Gracias por viajar con nosotros.</h2>
+      <div class="lv-divider"><span></span><i></i><span></span></div>
+      <p>Cada compra ayuda a que más productores regionales puedan llegar a nuevos hogares. Y hace que cada viaje continúe.</p>
+    </div>
+    <a class="lv-btn" href="#productos">EXPLORAR PRODUCTOS</a>
+  </div>
+</section>
+
+</div>
